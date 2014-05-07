@@ -60,8 +60,8 @@ public class main {
 
     //Define World Generation
     public static AwesomeGemWorldGeneration AAG_genWorld = new AwesomeGemWorldGeneration();
-	
-	public static int afroDimensionID = 8;
+
+    public static int afroDimensionID = 8;
 	
 	@EventHandler
 	public void load(FMLPreInitializationEvent event){
@@ -96,6 +96,7 @@ public class main {
 		GameRegistry.addBiome(denseForestBiome);
 
 		GameRegistry.addRecipe(new ItemStack(Blocks.emerald_ore, 1), new Object[] {"SS", "SS", 'S', main.emeraldShard});
+
 
 		AfroBlockManagement.init();
         toolManager.init();

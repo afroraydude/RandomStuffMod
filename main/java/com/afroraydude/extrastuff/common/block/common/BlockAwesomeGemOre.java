@@ -21,6 +21,7 @@ public class BlockAwesomeGemOre extends Block {
         this.setHarvestLevel("pickaxe", 2);
         this.setBlockName("awesomegem_ore");
         this.setCreativeTab(CreativeTabs.tabBlock);
+
 	}
 	
 	@SideOnly(Side.CLIENT)
