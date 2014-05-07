@@ -1,0 +1,17 @@
+[
+{
+  "modid": "AfroCore",
+  "name": "§6Afro Core",
+  "description": "A mod that adds random made up stuff, more and more as time passes",
+  "version": "Alpha 1",
+  "mcversion": "1.6.4",
+  "logoFile": "",
+  "url": "http://github.com/afroraydude/Afro_Core",
+  "updateUrl": "",
+  "authors": ["afroraydude"],
+  "credits": "Made by afroraydude.",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
