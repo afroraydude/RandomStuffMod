@@ -1,6 +1,7 @@
 package com.afroraydude.extrastuff.common.proxy;
 
 import cpw.mods.fml.common.registry.TickRegistry;
+import cpw.mods.fml.common.registry.
 import cpw.mods.fml.relauncher.Side;
 
 public class ServerProxy {
