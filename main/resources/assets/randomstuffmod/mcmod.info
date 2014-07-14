@@ -1,7 +1,7 @@
  [
 {
-"modid": "randomstuffmod",
-"name": "randomstuffmod",
+"modid": "RandomStuffMod",
+"name": "Random Stuff Mod",
 "description": "A mod that adds stuff",
 "version": "$version",
 "mcversion": "$mcversion",
