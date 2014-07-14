@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -32,6 +33,7 @@ public class main
         yourItem = new YourItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("yourItem").setTextureName(MODID + ":" + "yourItem.png");
 
         GameRegistry.registerItem(yourItem, "yourItem");
+        
     }
 
     @Mod.EventHandler
