@@ -9,18 +9,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import sun.org.mozilla.javascript.internal.ast.Block;
 
 /**
  * Created by afroraydude (@afroraydude).
  */
-@Mod(modid="RandomStuffMod", version="0.0.1")
+@Mod(modid="randomstuffmod", version="0.0.2")
 public class main
 {
-    public static String MODID = "RandomStuffMod";
-    public static String VERSION = "0.0.1";
+    public static String MODID = "randomstuffmod";
+    public static String VERSION = "0.0.2";
 
     //Items
     public static Item yourItem;
+
+    //Blocks
+    //public static Block yourBlock;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e)
@@ -32,8 +36,10 @@ public class main
     {
         yourItem = new YourItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("yourItem").setTextureName(MODID + ":" + "yourItem.png");
 
+
         GameRegistry.registerItem(yourItem, "yourItem");
-        
+
+
     }
 
     @Mod.EventHandler
