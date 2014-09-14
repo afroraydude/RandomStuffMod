@@ -1,0 +1,16 @@
+ [
+{
+"modid": "randomstuffmod",
+"name": "randomstuffmod",
+"description": "A mod that adds stuff",
+"version": "$version",
+"mcversion": "$mcversion",
+"url": "",
+"updateUrl": "",
+"authors": ["afroraydude"],
+"credits": "Me....I, Uh....I Made This",
+"logoFile": "",
+"screenshots": [],
+"dependencies": [mod_MinecraftForge]
+}
+]

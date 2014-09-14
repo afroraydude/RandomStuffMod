@@ -14,7 +14,7 @@ import sun.org.mozilla.javascript.internal.ast.Block;
 /**
  * Created by afroraydude (@afroraydude).
  */
-@Mod(modid="randomstuffmod", version="0.0.2")
+@Mod(name="randomstuffmod", modid="randomstuffmod", version="0.0.2")
 public class main
 {
     public static String MODID = "randomstuffmod";
