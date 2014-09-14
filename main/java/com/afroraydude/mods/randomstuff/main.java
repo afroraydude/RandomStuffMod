@@ -1,43 +1,55 @@
 package com.afroraydude.mods.randomstuff;
 
-import com.afroraydude.mods.randomstuff.item.YourItem;
+import com.afroraydude.mods.randomstuff.biome.TestBiome;
+import com.afroraydude.mods.randomstuff.item.TestItem;
+import com.mojang.realmsclient.dto.McoServer;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import sun.org.mozilla.javascript.internal.ast.Block;
+import net.minecraft.world.WorldType;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
 
 /**
- * Created by afroraydude (@afroraydude).
+ * Created by afroraydude.
  */
 @Mod(name="randomstuffmod", modid="randomstuffmod", version="0.0.2")
 public class main
 {
-    public static String MODID = "randomstuffmod";
-    public static String VERSION = "0.0.2";
+    String MODID = "randomstuffmod";
+    // Items
+    public static Item testItem;
 
-    //Items
-    public static Item yourItem;
+    // Biomes
+    public  static BiomeGenBase testBiome;
 
-    //Blocks
-    //public static Block yourBlock;
+    // Blocks
+    //public static Block testBlock;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e)
     {
+
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e)
     {
-        yourItem = new YourItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("yourItem").setTextureName(MODID + ":" + "yourItem.png");
 
+        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testItem").setTextureName(MODID + ":" + "testItem.png");
 
-        GameRegistry.registerItem(yourItem, "yourItem");
+        testBiome = new TestBiome(1).setBiomeName("Butts").setTemperatureRainfall(1.2F, 0.9F);
+
+        GameRegistry.registerItem(testItem, "testItem");
+
+        BiomeDictionary.registerBiomeType(testBiome, BiomeDictionary.Type.FOREST);
+        BiomeManager.addSpawnBiome(testBiome);
+        WorldType afroWorldType = new WorldTypeAfro("afro");
 
 
     }

@@ -3,11 +3,11 @@ package com.afroraydude.mods.randomstuff.item;
 import net.minecraft.item.Item;
 
 /**
- * Created by afroraydude (@afroraydude).
+ * Created by afroraydude.
  */
-public class YourItem extends Item
+public class TestItem extends Item
 {
-    public YourItem()
+    public TestItem()
     {
         super();
     }
