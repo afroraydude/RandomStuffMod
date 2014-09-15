@@ -5,83 +5,16 @@
  R4wk, ZeuX, IngisKahn      
  MCP Data version : unknown
 ****************************
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-1 warning
+:help
 
-:processResources
-:classes
-:jar
-:extractUserDev
-:getAssetsIndex
-:getAssets
-Current status: 2/686   0%
-Current status: 12/686   1%
-Current status: 35/686   5%
-Current status: 48/686   6%
-Current status: 65/686   9%
-Current status: 71/686   10%
-Current status: 94/686   13%
-Current status: 116/686   16%
-Current status: 129/686   18%
-Current status: 169/686   24%
-Current status: 200/686   29%
-Current status: 210/686   30%
-Current status: 214/686   31%
-Current status: 214/686   31%
-Current status: 249/686   36%
-Current status: 262/686   38%
-Current status: 273/686   39%
-Current status: 296/686   43%
-Current status: 296/686   43%
-Current status: 314/686   45%
-Current status: 332/686   48%
-Current status: 359/686   52%
-Current status: 368/686   53%
-Current status: 372/686   54%
-Current status: 372/686   54%
-Current status: 380/686   55%
-Current status: 396/686   57%
-Current status: 408/686   59%
-Current status: 412/686   60%
-Current status: 414/686   60%
-Current status: 423/686   61%
-Current status: 439/686   63%
-Current status: 452/686   65%
-Current status: 459/686   66%
-Current status: 469/686   68%
-Current status: 475/686   69%
-Current status: 499/686   72%
-Current status: 515/686   75%
-Current status: 524/686   76%
-Current status: 546/686   79%
-Current status: 553/686   80%
-Current status: 553/686   80%
-Current status: 557/686   81%
-Current status: 582/686   84%
-Current status: 591/686   86%
-Current status: 604/686   88%
-Current status: 606/686   88%
-Current status: 614/686   89%
-Current status: 633/686   92%
-Current status: 654/686   95%
-Current status: 658/686   95%
-Current status: 673/686   98%
-Current status: 677/686   98%
-:makeStart SKIPPED
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
-:genSrgs SKIPPED
-:reobf
-:assemble
-:check UP-TO-DATE
-:build
+Welcome to Gradle 1.11.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see a list of command-line options, run gradle --help
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 57.045 secs
+Total time: 38.807 secs
