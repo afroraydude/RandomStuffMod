@@ -8,6 +8,8 @@ import net.minecraft.world.gen.layer.GenLayerZoom;
 
 /**
  * Created by afroraydude
+ * this file makes it so that you have to choose the generator option called generator.afro
+ * instead of amplified, default, or large biomes
  */
 public class WorldTypeAfro extends WorldType {
     /**
