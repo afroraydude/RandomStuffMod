@@ -1,19 +1,24 @@
 package com.afroraydude.mods.randomstuff;
 
-import com.afroraydude.mods.randomstuff.biome.TestBiome;
+import com.afroraydude.mods.randomstuff.biome.DevilsParadise;
+import com.afroraydude.mods.randomstuff.biome.MushrooForest;
+import com.afroraydude.mods.randomstuff.block.TestBlock;
 import com.afroraydude.mods.randomstuff.item.TestItem;
-import com.mojang.realmsclient.dto.McoServer;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
+
+import javax.sound.sampled.CompoundControl;
 
 /**
  * Created by afroraydude.
@@ -31,11 +36,13 @@ public class main
 
     // Biomes
 
-    public  static BiomeGenBase mushroomForest;
+    public static BiomeGenBase mushroomForest;
 
+    ///TODO: Add generated structures to this biome
+    public static BiomeGenBase devilsParadise;
 
     // Blocks
-    //public static Block testBlock;
+    public static Block testBlock;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e)
@@ -47,17 +54,27 @@ public class main
     public void init(FMLInitializationEvent e)
     {
 
-        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testItem").setTextureName(MODID + ":" + "testItem.png");
+        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":" + "testItem.png");
 
-        mushroomForest = new TestBiome(1).setBiomeName("Mushroom Forest").setTemperatureRainfall(1.2F, 0.9F);
+        testBlock = new TestBlock(Material.rock).setBlockTextureName(MODID + ":" + "testblock");
+
+        mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F);
+
+        devilsParadise = new DevilsParadise(53);
 
         GameRegistry.registerItem(testItem, "testItem");
 
+        GameRegistry.registerBlock(testBlock, "testBlock");
+
+        ///TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
         WorldType afroWorldType = new WorldTypeAfro("afro");
 
         BiomeDictionary.registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
         BiomeManager.addSpawnBiome(mushroomForest);
 
+        BiomeDictionary.registerBiomeType(devilsParadise, BiomeDictionary.Type.PLAINS);
+        BiomeManager.addVillageBiome(devilsParadise, true);
+        BiomeManager.addSpawnBiome(devilsParadise);
 
     }
 

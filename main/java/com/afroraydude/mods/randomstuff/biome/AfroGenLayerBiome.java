@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by afroraydude.
+ * to get this just copy GenLayerBiome from net.minecraft.world.gen.layer
  */
 public class AfroGenLayerBiome extends GenLayer {
     private List<BiomeManager.BiomeEntry> desertBiomes = new ArrayList<BiomeManager.BiomeEntry>();
@@ -43,14 +44,14 @@ public class AfroGenLayerBiome extends GenLayer {
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.swampland, 10));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.plains, 10));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.taiga, 10));
-            desertBiomes.add(new BiomeManager.BiomeEntry(main.testBiome, 10));
+            desertBiomes.add(new BiomeManager.BiomeEntry(main.mushroomForest, 10));
         }
         else
         {
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.desert, 30));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.savanna, 20));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.plains, 10));
-            desertBiomes.add(new BiomeManager.BiomeEntry(main.testBiome, 10));
+            desertBiomes.add(new BiomeManager.BiomeEntry(main.mushroomForest, 10));
         }
     }
 
