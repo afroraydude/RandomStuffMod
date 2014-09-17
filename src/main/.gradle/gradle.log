@@ -1,0 +1,25 @@
+****************************
+ Powered By MCP:            
+ http://mcp.ocean-labs.de/  
+ Searge, ProfMobius, Fesh0r,
+ R4wk, ZeuX, IngisKahn      
+ MCP Data version : unknown
+****************************
+:clean
+:extractUserDev
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not resolve all dependencies for configuration ':userDevPackageDepConfig'.
+> Could not resolve net.minecraftforge:forge:1.7.10-10.12.0.1208.
+  Required by:
+      :main:0.0.4
+   > Could not GET 'https://libraries.minecraft.net/net/minecraftforge/forge/1.7.10-10.12.0.1208/forge-1.7.10-10.12.0.1208.pom'. Received status code 403 from server: Forbidden
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 54.744 secs
