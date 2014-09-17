@@ -54,9 +54,9 @@ public class main
     public void init(FMLInitializationEvent e)
     {
 
-        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":" + "testitem.png");
+        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem.png");
 
-        testBlock = new TestBlock(Material.rock).setBlockName("testblock").setBlockTextureName(MODID + ":" + "testblock").setCreativeTab(CreativeTabs.tabMisc);
+        testBlock = new TestBlock(Material.rock).setBlockName("testblock").setBlockTextureName(MODID + ":testblock").setCreativeTab(CreativeTabs.tabMisc);
 
         mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F);
 
@@ -67,7 +67,7 @@ public class main
         GameRegistry.registerBlock(testBlock, "testblock");
 
         ///TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
-        WorldType afroWorldType = new WorldTypeAfro("afro");
+        // Only if I want a world type: "WorldType afroWorldType = new WorldTypeAfro("afro");"
 
         BiomeDictionary.registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
         BiomeManager.addSpawnBiome(mushroomForest);
