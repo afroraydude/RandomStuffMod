@@ -5,16 +5,152 @@
  R4wk, ZeuX, IngisKahn      
  MCP Data version : unknown
 ****************************
-:help
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:extractUserDev
 
-Welcome to Gradle 1.11.
+FAILURE: Build failed with an exception.
 
-To run a build, run gradle <task> ...
+* What went wrong:
+Could not resolve all dependencies for configuration ':userDevPackageDepConfig'.
+> Could not resolve net.minecraftforge:forge:1.7.2-10.12.0.1208.
+  Required by:
+      :main:0.0.4
+   > Could not GET 'https://libraries.minecraft.net/net/minecraftforge/forge/1.7.2-10.12.0.1208/forge-1.7.2-10.12.0.1208.pom'. Received status code 403 from server: Forbidden
 
-To see a list of available tasks, run gradle tasks
+* Try:
+Run with --info or --debug option to get more log output.
 
-To see a list of command-line options, run gradle --help
+* Exception is:
+org.gradle.api.artifacts.ResolveException: Could not resolve all dependencies for configuration ':userDevPackageDepConfig'.
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration.rethrowFailure(DefaultLenientConfiguration.java:52)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultResolvedConfiguration.rethrowFailure(DefaultResolvedConfiguration.java:36)
+	at org.gradle.api.internal.artifacts.ivyservice.SelfResolvingDependencyResolver$FilesAggregatingResolvedConfiguration.rethrowFailure(SelfResolvingDependencyResolver.java:106)
+	at org.gradle.api.internal.artifacts.ivyservice.ErrorHandlingArtifactDependencyResolver$ErrorHandlingResolvedConfiguration.rethrowFailure(ErrorHandlingArtifactDependencyResolver.java:176)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$ConfigurationFileCollection.getFiles(DefaultConfiguration.java:465)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.getFiles(DefaultConfiguration.java:202)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration_Decorated.getFiles(Unknown Source)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext$FileTreeConverter.convertInto(DefaultFileCollectionResolveContext.java:191)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext.doResolve(DefaultFileCollectionResolveContext.java:103)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext.resolveAsFileTrees(DefaultFileCollectionResolveContext.java:75)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext$FileTreeConverter.convertInto(DefaultFileCollectionResolveContext.java:182)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext.doResolve(DefaultFileCollectionResolveContext.java:98)
+	at org.gradle.api.internal.file.collections.DefaultFileCollectionResolveContext.resolveAsFileTrees(DefaultFileCollectionResolveContext.java:75)
+	at org.gradle.api.internal.file.CompositeFileCollection$1.resolve(CompositeFileCollection.java:88)
+	at org.gradle.api.internal.file.CompositeFileCollection.getSourceCollections(CompositeFileCollection.java:143)
+	at org.gradle.api.internal.file.CompositeFileTree.getSourceCollections(CompositeFileTree.java:30)
+	at org.gradle.api.internal.file.CompositeFileCollection.getFiles(CompositeFileCollection.java:38)
+	at org.gradle.api.internal.changedetection.state.DefaultFileSnapshotter.snapshot(DefaultFileSnapshotter.java:44)
+	at org.gradle.api.internal.changedetection.rules.InputFilesStateChangeRule.create(InputFilesStateChangeRule.java:33)
+	at org.gradle.api.internal.changedetection.rules.TaskUpToDateState.<init>(TaskUpToDateState.java:46)
+	at org.gradle.api.internal.changedetection.changes.DefaultTaskArtifactStateRepository$TaskArtifactStateImpl.getStates(DefaultTaskArtifactStateRepository.java:126)
+	at org.gradle.api.internal.changedetection.changes.DefaultTaskArtifactStateRepository$TaskArtifactStateImpl.isUpToDate(DefaultTaskArtifactStateRepository.java:69)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:289)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:86)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:67)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:54)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:166)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:113)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:81)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:64)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:35)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:50)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:201)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:174)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:170)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:139)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:46)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.Main.main(Main.java:37)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:50)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:32)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.internal.artifacts.ivyservice.ModuleVersionResolveException: Could not resolve net.minecraftforge:forge:1.7.2-10.12.0.1208.
+Required by:
+    :main:0.0.4
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain.resolve(UserResolverChain.java:67)
+	at org.gradle.api.internal.artifacts.ivyservice.clientmodule.ClientModuleResolver.resolve(ClientModuleResolver.java:34)
+	at org.gradle.api.internal.artifacts.ivyservice.projectmodule.ProjectDependencyResolver.resolve(ProjectDependencyResolver.java:48)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.LazyDependencyToModuleResolver$AbstractVersionResolveResult.resolve(LazyDependencyToModuleResolver.java:86)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder$ModuleVersionResolveState.resolve(DependencyGraphBuilder.java:650)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder$ModuleVersionResolveState.getMetaData(DependencyGraphBuilder.java:661)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder$DependencyEdge.calculateTargetConfigurations(DependencyGraphBuilder.java:337)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder$DependencyEdge.attachToTargetConfigurations(DependencyGraphBuilder.java:311)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder.traverseGraph(DependencyGraphBuilder.java:127)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder.resolve(DependencyGraphBuilder.java:67)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver$1.transform(DefaultDependencyResolver.java:108)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver$1.transform(DefaultDependencyResolver.java:77)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultIvyContextManager.withIvy(DefaultIvyContextManager.java:61)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver.resolve(DefaultDependencyResolver.java:77)
+	at org.gradle.api.internal.artifacts.ivyservice.CacheLockingArtifactDependencyResolver$1.create(CacheLockingArtifactDependencyResolver.java:39)
+	at org.gradle.api.internal.artifacts.ivyservice.CacheLockingArtifactDependencyResolver$1.create(CacheLockingArtifactDependencyResolver.java:37)
+	at org.gradle.cache.internal.DefaultCacheAccess.useCache(DefaultCacheAccess.java:187)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.useCache(DefaultPersistentDirectoryStore.java:102)
+	at org.gradle.cache.internal.DefaultCacheFactory$ReferenceTrackingCache.useCache(DefaultCacheFactory.java:189)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultCacheLockingManager.useCache(DefaultCacheLockingManager.java:61)
+	at org.gradle.api.internal.artifacts.ivyservice.CacheLockingArtifactDependencyResolver.resolve(CacheLockingArtifactDependencyResolver.java:37)
+	at org.gradle.api.internal.artifacts.ivyservice.SelfResolvingDependencyResolver.resolve(SelfResolvingDependencyResolver.java:41)
+	at org.gradle.api.internal.artifacts.ivyservice.ShortcircuitEmptyConfigsArtifactDependencyResolver.resolve(ShortcircuitEmptyConfigsArtifactDependencyResolver.java:51)
+	at org.gradle.api.internal.artifacts.ivyservice.ErrorHandlingArtifactDependencyResolver.resolve(ErrorHandlingArtifactDependencyResolver.java:44)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultConfigurationResolver.resolve(DefaultConfigurationResolver.java:42)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveNow(DefaultConfiguration.java:240)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.getResolvedConfiguration(DefaultConfiguration.java:230)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration_Decorated.getResolvedConfiguration(Unknown Source)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$ConfigurationFileCollection.getFiles(DefaultConfiguration.java:463)
+	... 58 more
+Caused by: org.gradle.api.UncheckedIOException: Could not GET 'https://libraries.minecraft.net/net/minecraftforge/forge/1.7.2-10.12.0.1208/forge-1.7.2-10.12.0.1208.pom'. Received status code 403 from server: Forbidden
+	at org.gradle.api.internal.externalresource.transport.http.HttpClientHelper.processResponse(HttpClientHelper.java:121)
+	at org.gradle.api.internal.externalresource.transport.http.HttpClientHelper.performGet(HttpClientHelper.java:70)
+	at org.gradle.api.internal.externalresource.transport.http.HttpResourceAccessor.getResource(HttpResourceAccessor.java:46)
+	at org.gradle.api.internal.externalresource.transport.http.HttpResourceAccessor.getResource(HttpResourceAccessor.java:32)
+	at org.gradle.api.internal.externalresource.transfer.ProgressLoggingExternalResourceAccessor.getResource(ProgressLoggingExternalResourceAccessor.java:38)
+	at org.gradle.api.internal.externalresource.transfer.DefaultCacheAwareExternalResourceAccessor.getResource(DefaultCacheAwareExternalResourceAccessor.java:60)
+	at org.gradle.api.internal.externalresource.transport.DefaultExternalResourceRepository.getResource(DefaultExternalResourceRepository.java:65)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.getResource(ExternalResourceResolver.java:427)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.findStaticResourceUsingPatterns(ExternalResourceResolver.java:307)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.findMetaDataFileUsingAnyPattern(ExternalResourceResolver.java:266)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.findStaticDependency(ExternalResourceResolver.java:170)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.getDependency(ExternalResourceResolver.java:165)
+	at org.gradle.api.internal.artifacts.repositories.resolver.MavenResolver.getDependency(MavenResolver.java:81)
+	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver.getDependency(ExternalResourceResolver.java:157)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CacheLockingModuleVersionRepository$1.run(CacheLockingModuleVersionRepository.java:46)
+	at org.gradle.internal.Factories$1.create(Factories.java:22)
+	at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:237)
+	at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:308)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.longRunningOperation(DefaultPersistentDirectoryStore.java:114)
+	at org.gradle.cache.internal.DefaultCacheFactory$ReferenceTrackingCache.longRunningOperation(DefaultCacheFactory.java:185)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultCacheLockingManager.longRunningOperation(DefaultCacheLockingManager.java:57)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CacheLockingModuleVersionRepository.getDependency(CacheLockingModuleVersionRepository.java:44)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleVersionRepository.getDependency(CachingModuleVersionRepository.java:90)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.CachedRepository.getDependency(CachedRepository.java:55)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain$RepositoryResolveState.resolve(UserResolverChain.java:184)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain.findLatestModule(UserResolverChain.java:98)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain.findLatestModule(UserResolverChain.java:81)
+	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain.resolve(UserResolverChain.java:56)
+	... 86 more
 
-BUILD SUCCESSFUL
 
-Total time: 38.807 secs
+BUILD FAILED
+
+Total time: 28.624 secs

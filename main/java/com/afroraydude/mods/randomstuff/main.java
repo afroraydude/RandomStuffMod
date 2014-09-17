@@ -56,7 +56,7 @@ public class main
 
         testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":" + "testItem.png");
 
-        testBlock = new TestBlock(Material.rock).setBlockTextureName(MODID + ":" + "testblock");
+        testBlock = new TestBlock(Material.rock).setBlockTextureName(MODID + ":" + "testblock").setCreativeTab(CreativeTabs.tabMisc);
 
         mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F);
 
