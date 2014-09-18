@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * Created by afroraydude.
  * to get this just copy GenLayerBiome from net.minecraft.world.gen.layer
+ * but it acts more like line 26 to line 46 of net.minecraftforge.BiomeManager
  */
 public class AfroGenLayerBiome extends GenLayer {
     private List<BiomeManager.BiomeEntry> desertBiomes = new ArrayList<BiomeManager.BiomeEntry>();

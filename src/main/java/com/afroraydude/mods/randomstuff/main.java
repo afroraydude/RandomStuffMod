@@ -48,30 +48,33 @@ public class main
     public void preInit(FMLPreInitializationEvent e)
     {
 
+        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem.png");
+
+        testBlock = new TestBlock(Material.rock).setBlockName("testblock").setBlockTextureName(MODID + ":testblock").setCreativeTab(CreativeTabs.tabMisc);
+
+        GameRegistry.registerItem(testItem, "testitem");
+
+        GameRegistry.registerBlock(testBlock, "testblock");
+
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e)
     {
 
-        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem.png");
-
-        testBlock = new TestBlock(Material.rock).setBlockName("testblock").setBlockTextureName(MODID + ":testblock").setCreativeTab(CreativeTabs.tabMisc);
-
         mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F);
 
         devilsParadise = new DevilsParadise(53);
-
-        GameRegistry.registerItem(testItem, "testitem");
-
-        GameRegistry.registerBlock(testBlock, "testblock");
 
         ///TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
         // Only if I want a world type: "WorldType afroWorldType = new WorldTypeAfro("afro");"
 
         BiomeDictionary.registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
         BiomeManager.addSpawnBiome(mushroomForest);
+        BiomeManager.coolBiomes.add(new BiomeManager.BiomeEntry(mushroomForest, 10));
+        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(mushroomForest, 10));
 
+        BiomeManager.desertBiomes.add(new BiomeManager.BiomeEntry(devilsParadise, 10));
         BiomeDictionary.registerBiomeType(devilsParadise, BiomeDictionary.Type.PLAINS);
         BiomeManager.addVillageBiome(devilsParadise, true);
         BiomeManager.addSpawnBiome(devilsParadise);
