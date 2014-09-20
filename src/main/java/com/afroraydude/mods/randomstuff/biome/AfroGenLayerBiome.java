@@ -39,6 +39,7 @@ public class AfroGenLayerBiome extends GenLayer {
 
         if (p_i2122_4_ == WorldType.DEFAULT_1_1)
         {
+
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.desert, 10));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.forest, 10));
             desertBiomes.add(new BiomeManager.BiomeEntry(BiomeGenBase.extremeHills, 10));

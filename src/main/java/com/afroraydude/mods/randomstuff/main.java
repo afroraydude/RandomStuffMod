@@ -20,6 +20,11 @@ import net.minecraftforge.common.BiomeManager;
 
 import javax.sound.sampled.CompoundControl;
 
+import static net.minecraftforge.common.BiomeDictionary.registerBiomeType;
+import static net.minecraftforge.common.BiomeManager.BiomeEntry;
+import static net.minecraftforge.common.BiomeManager.addSpawnBiome;
+import static net.minecraftforge.common.BiomeManager.addVillageBiome;
+
 /**
  * Created by afroraydude.
  * for minecraft version 1.7.10
@@ -62,22 +67,22 @@ public class main
     public void init(FMLInitializationEvent e)
     {
 
-        mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F);
+        mushroomForest = new MushrooForest(52).setTemperatureRainfall(1.2F, 0.9F).setBiomeName("Mushroom Forest");
 
-        devilsParadise = new DevilsParadise(53);
+        devilsParadise = new DevilsParadise(53).setBiomeName("Devil's Paradise");
 
-        ///TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
-        // Only if I want a world type: "WorldType afroWorldType = new WorldTypeAfro("afro");"
+        /// TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
+        // WorldType afroWorldType = new WorldTypeAfro("afro");
 
-        BiomeDictionary.registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
-        BiomeManager.addSpawnBiome(mushroomForest);
-        BiomeManager.coolBiomes.add(new BiomeManager.BiomeEntry(mushroomForest, 10));
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(mushroomForest, 10));
+        registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
+        addSpawnBiome(mushroomForest);
+        BiomeManager.coolBiomes.add(new BiomeEntry(mushroomForest, 5));
+        BiomeManager.warmBiomes.add(new BiomeEntry(mushroomForest, 5));
 
-        BiomeManager.desertBiomes.add(new BiomeManager.BiomeEntry(devilsParadise, 10));
-        BiomeDictionary.registerBiomeType(devilsParadise, BiomeDictionary.Type.PLAINS);
-        BiomeManager.addVillageBiome(devilsParadise, true);
-        BiomeManager.addSpawnBiome(devilsParadise);
+        BiomeManager.desertBiomes.add(new BiomeEntry(devilsParadise, 5));
+        registerBiomeType(devilsParadise, BiomeDictionary.Type.PLAINS);
+        addVillageBiome(devilsParadise, true);
+        addSpawnBiome(devilsParadise);
 
     }
 
