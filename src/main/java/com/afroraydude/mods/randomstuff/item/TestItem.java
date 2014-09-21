@@ -10,7 +10,6 @@ public class TestItem extends Item
     public TestItem()
     {
         super();
-        getUnlocalizedName();
-        
+
     }
 }

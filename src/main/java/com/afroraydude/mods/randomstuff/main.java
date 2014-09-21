@@ -76,10 +76,10 @@ public class main
 
         registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
         addSpawnBiome(mushroomForest);
-        BiomeManager.coolBiomes.add(new BiomeEntry(mushroomForest, 5));
-        BiomeManager.warmBiomes.add(new BiomeEntry(mushroomForest, 5));
+        BiomeManager.coolBiomes.add(new BiomeEntry(mushroomForest, 25));
+        BiomeManager.warmBiomes.add(new BiomeEntry(mushroomForest, 25));
 
-        BiomeManager.desertBiomes.add(new BiomeEntry(devilsParadise, 5));
+        BiomeManager.desertBiomes.add(new BiomeEntry(devilsParadise, 25));
         registerBiomeType(devilsParadise, BiomeDictionary.Type.PLAINS);
         addVillageBiome(devilsParadise, true);
         addSpawnBiome(devilsParadise);
