@@ -12,6 +12,6 @@ public class DevilsParadise extends BiomeGenBase {
         this.topBlock = Blocks.netherrack;
         this.fillerBlock = Blocks.soul_sand;
         this.theBiomeDecorator.cactiPerChunk = 5;
-        this.setTemperatureRainfall(-1.0F, 0.2F);
+        this.theBiomeDecorator.treesPerChunk = -999;
     }
 }
