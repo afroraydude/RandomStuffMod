@@ -70,7 +70,7 @@ public class main
 
         //AfroLogger.log(Level.INFO, "Loading testItem");
 
-        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem.png");
+        testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem");
 
         //AfroLogger.log(Level.INFO, "Loading testBlock");
 
@@ -97,7 +97,7 @@ public class main
         devilsParadise = new DevilsParadise(53).setBiomeName("Devil's Paradise");
 
         /// TODO: Fix slow world spawn times, may only happen when other applications are running, investigate later.
-        // WorldType afroWorldType = new WorldTypeAfro("afro");
+        // WorldType afroWorldType = new WorldTypeAfro("a        fro");
 
         registerBiomeType(mushroomForest, BiomeDictionary.Type.FOREST);
         addSpawnBiome(mushroomForest);
