@@ -33,7 +33,7 @@ import static net.minecraftforge.common.BiomeManager.*;
  * for Minecraft version 1.7.10
  * for forge build 1208 or higher
  */
-@Mod(name="randomstuffmod", modid="randomstuff", version="0.0.4")
+@Mod(name="randomstuffm", modid="randomstuff", version="0.0.4")
 public class main
 {
 
@@ -62,25 +62,13 @@ public class main
     {
 
         this.proxy.preInit(e);
-        //AfroLogger.init();
-
-        //AfroLogger.log(Level.WARNING, "This mod is in a very early alpha state and is supposed to be used for testing purposes.");
-
-        //AfroLogger.log(Level.WARNING, "If this is not your intention, please remove this mod.");
-
-        //AfroLogger.log(Level.INFO, "Loading testItem");
+        // AfroLogger.init();
 
         testItem = new TestItem().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("testitem").setTextureName(MODID + ":testitem");
 
-        //AfroLogger.log(Level.INFO, "Loading testBlock");
-
         testBlock = new TestBlock(Material.rock).setBlockName("testblock").setBlockTextureName(MODID + ":testblock").setCreativeTab(CreativeTabs.tabMisc);
 
-        //AfroLogger.log(Level.INFO, "Registering testItem");
-
         GameRegistry.registerItem(testItem, "testitem");
-
-        //AfroLogger.log(Level.INFO, "Registering testBlock");
 
         GameRegistry.registerBlock(testBlock, "testblock");
 
